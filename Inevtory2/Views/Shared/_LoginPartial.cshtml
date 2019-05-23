@@ -1,0 +1,39 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+
+        <ul class="nav navbar-nav navbar-right">
+ 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span>Hello - </span> <b>(<u>@User.Identity.GetUserName()</u>)</b>
+                    <span class="caret"></span>
+                </a>
+
+
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" align="center">
+                    <li class="text-center"><a class="dropdown-item" href="http://localhost:50957/Inventories#"><strong>View All items in Inventory</strong></a></li>
+                    <li class="divider" role="separator"></li>
+                    <li class="text-center"><a class="dropdown-item" href="http://localhost:50957/Inventories/Create">Add an Item to Inventory</a></li>
+                </ul>
+
+
+            </li>
+
+
+            <button class="btn btn-warning dropdown-toggle"><a class="text-center" href="javascript:document.getElementById('logoutForm').submit()"><b style="color: #fff" ;><u>Log off</u></b></a></button>
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

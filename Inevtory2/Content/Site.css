@@ -1,0 +1,139 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+
+
+/* BOOTSTRAP OVERRIDES */
+body { /*affects the whole body but not the NAVBAR*/
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+
+
+.navbar { /*affects the NAVBAR*/
+    background-color: #176d96;
+    border-color: #04fff8;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-weight: 800;*/
+}
+
+.navbar-brand {
+    font-size: 20px;
+    padding: 15px 16px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #d8cece;
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #00f3ffd4;
+}
+
+.navbar-inverse .navbar-nav > .dropdown > a .caret { /*Izi mbili ni za io Caret*/
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.navbar-inverse .navbar-nav > .open > a .caret, .navbar-inverse .navbar-nav > .open > a:hover .caret, .navbar-inverse .navbar-nav > .open > a:focus .caret {
+    border-top-color: #0250ff;
+    border-bottom-color: #b4ff00;
+}
+
+
+.dropdown:hover {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512;
+}
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { /*affects the HEADINGS*/
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.0;
+}
+
+.form-group { /*affects the FORM*/
+    margin-bottom: 20px;
+}
+
+.form-control { /*Izi zina-affect adi Text-Boxes za form*/
+    display: block;
+    width: 100%;
+    height: 43px;
+    padding: 6px 20px;
+    font-size: 14px;
+    line-height: 1.128571429;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #CCCCAA;
+    border: 2px solid #CCCC78;
+    border-radius: 14px;
+}
+
+
+.btn { /*ii ni io button ya Save uko down*/
+    display: inline-block;
+    padding: 6px 22px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 5px solid transparent;
+    -ms-border-radius: 18px;
+    border-radius: 18px;
+    color: #333;
+    background-color: #3a797973;
+    border-color: #637c8433;
+}
+
+.form-control:focus { /*ii ni saa zenye unahover TEXT BOX uselect data*/
+    border-color: #dfff00;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+
+
+/*CLASS THAT IS NOT PART OF BOOTSTRAP BUT PART OF ASP.NET MVC*/
+span.field-validation-error {
+    color: #ff0000ba;
+}
+
